@@ -1,21 +1,16 @@
 name: build_static_pages_from_md
 on: [push]
 jobs:
-  check-bats-version:
+  install-golang-and-hugo:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
-  do-this-other-thing:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14'
-      - run: npm install -g bats
-      - run: bats -v
+      - run: export DEBIAN_FRONTEND=noninteractive
+      - run: apt update && apt upgrade -y 
+      - run: apt install golang
+      - run: apt install hugo
+      - run: go version && hugo version
+# verify-dependencies:
+#   runs-on: ubuntu-latest
+#   steps:
+#     - run: go version
+#     - run: hugo
