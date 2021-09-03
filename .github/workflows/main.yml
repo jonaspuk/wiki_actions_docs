@@ -4,6 +4,7 @@ jobs:
   install-golang-and-hugo:
     runs-on: ubuntu-latest
     steps:
+      - run: sudo su -
       - run: export DEBIAN_FRONTEND=noninteractive
       - run: apt update && apt upgrade -y 
       - run: apt install golang
