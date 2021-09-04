@@ -23,10 +23,11 @@ jobs:
     - name: Print main repo contents
       run: ls -la main/docs && ls -la wiki
     - run: |
+        # Pushing from wiki to docs
         cd main
         date > /tmp/generated.txt
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add .
-        git commit -m "$(cat /tmp/generated.txt)" || echo
+        git commit -m "$(cat /tmp/generated.txt)" || echo #this is to change the return code to 0
         git push
