@@ -22,8 +22,8 @@ jobs:
       run: rsync -avz --exclude '.git' wiki/ main/docs
     - name: Print main repo contents
       run: ls -la main/docs && ls -la wiki
-    - run: |
-        # Pushing from wiki to docs
+    - name: Pushing from wiki to docs
+      run: |
         cd main
         date > /tmp/generated.txt
         git config user.name github-actions
