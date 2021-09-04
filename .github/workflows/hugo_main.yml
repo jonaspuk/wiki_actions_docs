@@ -21,11 +21,6 @@ jobs:
       run: rsync -avz --exclude '.git' .wiki/ .main/docs
     - name: Print main repo contents
       run: ls -la .main/docs && ls -la .wiki
-  push:
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-    - uses: actions/checkout@v2
     - run: |
         date > /tmp/generated.txt
         git config user.name github-actions
@@ -33,3 +28,20 @@ jobs:
         git add .main/docs/*
         git commit -m "$(cat /tmp/generated.txt)"
         git push
+# push:
+#   runs-on: ubuntu-latest
+#   needs: build
+#   steps:
+#   - name: Checkout wiki repo
+#   - uses: actions/checkout@v2
+#     with:
+#       repository: 'jonaspuk/wiki_actions_docs.wiki'
+#       path: '.wiki'
+#   - name: 
+#   - run: |
+#       date > /tmp/generated.txt
+#       git config user.name github-actions
+#       git config user.email github-actions@github.com
+#       git add .main/docs/*
+#       git commit -m "$(cat /tmp/generated.txt)"
+#       git push
