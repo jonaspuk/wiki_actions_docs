@@ -6,12 +6,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
+    - name: Checkout Wiki
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
         repository: 'jonaspuk/wiki_actions_docs.wiki'
+        path: '.wiki'
+    - name: Checkout Main Repo
+      uses: actions/checkout@v2
+      with:
+        path: '.main'
     - name: Print wiki repo contents
-      run: ls -la && ls -la wiki_actions_docs.wiki
+      run: ls -la
     - name: Print repo name
       run: echo "${{ github.repository }}"
