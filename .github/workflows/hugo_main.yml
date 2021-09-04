@@ -25,13 +25,13 @@ jobs:
       run: |
         echo -e "# Container image that runs your code \n
         FROM klakegg/hugo:0.88.0-ext-ubuntu-onbuild \n
-        COPY entrypoint.sh /entrypoint.sh \n
+        COPY docs/main/* /md_files/ \n
         # Code file to execute when the docker container starts up (entrypoint.sh) \n
         ENTRYPOINT ["/entrypoint.sh"]" > /tmp/Dockerfile
         echo
         cat /tmp/Dockerfile
     - name: Build a Hugo Docker Image
-      run: echo "build stage"
+      run: docker build -t hugo:local_github_action_v1
     - name: Pushing from wiki to docs
       run: |
         cd main
