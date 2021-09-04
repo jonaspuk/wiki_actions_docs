@@ -1,1 +1,1 @@
-# Addind a new page to test github actions
+# Adding a new page to test github actions
