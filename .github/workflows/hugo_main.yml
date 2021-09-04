@@ -17,6 +17,6 @@ jobs:
       with:
         path: '.main'
     - name: Print wiki repo contents
-      run: ls -la
+      run: ls -la *
     - name: Print repo name
       run: echo "${{ github.repository }}"
