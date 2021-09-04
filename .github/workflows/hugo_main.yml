@@ -1,6 +1,6 @@
 name: Hugo
 
-on: [push]
+#on: [push]
 
 jobs:
   build:
