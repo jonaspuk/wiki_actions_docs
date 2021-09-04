@@ -17,9 +17,9 @@ jobs:
       uses: actions/checkout@v2
       with:
         path: '.main'
-    - name: Print repo contents
-      run: ls -la .main && ls -la .wiki
     - name: Sync repo's
       run: rsync -avz --exclude '.git' .wiki/ .main/docs
     - name: Print main repo contents
       run: ls -la .main/docs && ls -la .wiki
+    - name: Push New Docs
+      run: git add .main/docs/* && git commit -m "$(echo "Updating docs$(time)")" && git push
