@@ -1,8 +1,8 @@
 name: Hugo
-on:
-  schedule:
-    # * is a special character in YAML so you have to quote this string
-    - cron:  '2 * * * *'
+on: workflow_dispatch
+# schedule:
+#   # * is a special character in YAML so you have to quote this string, shortest is 5 minutes
+#   - cron:  '5 * * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
