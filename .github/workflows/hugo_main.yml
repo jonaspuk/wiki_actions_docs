@@ -21,9 +21,11 @@ jobs:
       run: rsync -avz --exclude '.git' .wiki/ .main/docs
     - name: Print main repo contents
       run: ls -la .main/docs && ls -la .wiki
-    - name: Push New Docs
-      uses: actions/checkout@v2
-      run: |
+  push:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
         date > generated.txt
         git config user.name github-actions
         git config user.email github-actions@github.com
