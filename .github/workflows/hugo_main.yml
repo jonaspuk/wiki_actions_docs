@@ -5,7 +5,7 @@ on:
     - cron:  '54 * * * 1-5'
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
     - name: Checkout Wiki
       uses: actions/checkout@v2
@@ -31,7 +31,13 @@ jobs:
         echo
         cat /tmp/Dockerfile
     - name: Build a Hugo Docker Image
-      run: docker build -t hugo:local_github_action_v1
+      run: echo "not actually building anything just yet"
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+#   - name: hugo
+#     uses: klakegg/actions-hugo@1.0.0
     - name: Pushing from wiki to docs
       run: |
         cd main
