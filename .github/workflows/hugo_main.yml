@@ -22,4 +22,11 @@ jobs:
     - name: Print main repo contents
       run: ls -la .main/docs && ls -la .wiki
     - name: Push New Docs
-      run: git add .main/docs/* && git commit -m "$(echo "Updating docs$(time)")" && git push
+      uses: actions/checkout@v2
+      run: |
+        date > generated.txt
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git commit -m "generated"
+        git push
