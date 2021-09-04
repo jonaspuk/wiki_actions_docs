@@ -18,3 +18,5 @@ jobs:
       run: ls -la .main && ls -la .wiki
     - name: Sync repo's
       run: rsync -avz --exclude '.git' .wiki/ .main/docs
+    - name: Print main repo contents
+      run: ls -la .main/docs && ls -la .wiki
