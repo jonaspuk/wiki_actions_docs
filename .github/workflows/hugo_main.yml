@@ -30,7 +30,7 @@ jobs:
         echo
         cat /tmp/Dockerfile
     - name: Build a Hugo Docker Image
-#     run: docker://
+      run: echo "build stage"
     - name: Pushing from wiki to docs
       run: |
         cd main
