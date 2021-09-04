@@ -22,6 +22,16 @@ jobs:
       run: rsync -avz --exclude '.git' wiki/ main/docs
     - name: Print main repo contents
       run: ls -la main/docs && ls -la wiki
+    - name: Build a Hugo Docker Image
+      run:  |
+        echo -e "# Container image that runs your code \n
+        FROM klakegg/hugo:0.88.0-ext-ubuntu-onbuild \n
+        # Copies your code file from your action repository to the filesystem path `/` of the container \n
+        COPY entrypoint.sh /entrypoint.sh \n
+        # Code file to execute when the docker container starts up (`entrypoint.sh`) \n
+        ENTRYPOINT ["/entrypoint.sh"] " > /tmp/Dockerfile
+        echo
+        cat /tmp/Dockerfile
     - name: Pushing from wiki to docs
       run: |
         cd main
