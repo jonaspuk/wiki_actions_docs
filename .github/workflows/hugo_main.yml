@@ -11,5 +11,7 @@ jobs:
       with:
         fetch-depth: 0
         repository: 'jonaspuk/wiki_actions_docs.wiki'
+    - name: Print wiki repo contents
+      run: ls -la && ls -la wiki_actions_docs.wiki
     - name: Print repo name
       run: echo "${{ github.repository }}"
