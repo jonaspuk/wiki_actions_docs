@@ -1,7 +1,5 @@
 name: Hugo
-
 on: [push]
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,5 +16,5 @@ jobs:
         path: '.main'
     - name: Print repo contents
       run: ls -la .main && ls -la .wiki
-    - name: Print repo name
-      run: echo "${{ github.repository }}"
+    - name: Sync repo's
+      run: rsync -avz --exclude '.git' .wiki/ .main/docs
