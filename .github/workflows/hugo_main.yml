@@ -36,8 +36,11 @@ jobs:
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: 'latest'
-#   - name: hugo
-#     uses: klakegg/actions-hugo@1.0.0
+    - name: Running some Hugo commands
+      run: |
+        hugo version
+        hugo new site test_site
+        ls -la test_site
     - name: Pushing from wiki to docs
       run: |
         cd main
