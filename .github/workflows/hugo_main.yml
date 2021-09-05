@@ -17,7 +17,7 @@ jobs:
       with:
         repository: '${{ github.repository }}'
         path: 'main'
-    - name: Sync repo's
+    - name: Copy wiki files to docs
       run: rsync -avz --exclude '.git' wiki/ main/docs
     - name: Print main repo contents
       run: ls -la main/docs && ls -la wiki
