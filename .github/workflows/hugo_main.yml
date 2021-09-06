@@ -42,7 +42,7 @@ jobs:
         hugo new site mydocs; cd mydocs
         git clone https://github.com/alex-shpak/hugo-book themes/book
         cp -R themes/book/exampleSite/content .
-        hugo -d main/docs --minify --theme book # getting an error message about not being extended
+        hugo -D --quiet --minify --theme book -d ./main/docs/
     - name: Creting static HTML files
       run: |
         ls -la main/docs
