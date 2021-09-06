@@ -40,13 +40,12 @@ jobs:
     - name: Creating a site and pulling a theme
       run: |
         hugo new site mydocs &>/dev/null; cd mydocs
-        git clone https://github.com/alex-shpak/hugo-book themes/book
-        cp -R themes/book/exampleSite/content .
-        hugo -D -v --minify --theme book -d ../main/docs/
+        git clone https://github.com/mbrt-yeah/uwe-uwe-hugo.git themes/uwe-uwe
+        hugo -D -v --theme uwe-uwe -d ../main/docs/
     - name: Creting static HTML files
       run: |
         ls -la main/docs
-    - name: Pushing from wiki to docs
+    - name: Pushing docs to repo
       run: |
         cd main
         date > /tmp/generated.txt
