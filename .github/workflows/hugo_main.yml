@@ -2,7 +2,7 @@ name: Hugo
 on:
   workflow_dispatch:
   schedule:
-    - cron:  '54 * * * 1-5'
+    - cron:  '51 * * * 1-5'
 jobs:
   build:
     runs-on: ubuntu-20.04
@@ -36,11 +36,14 @@ jobs:
       uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: 'latest'
-    - name: Running some Hugo commands
+    - name: Creating a site and pulling a theme
       run: |
-        hugo version
-        hugo new site test_site
-        ls -la test_site
+        hugo new site mydocs; cd mydocs
+        git clone https://github.com/alex-shpak/hugo-book themes/book
+        cp -R themes/book/exampleSite/content .
+    - name: Creting static HTML files
+      run: |
+        pwd
     - name: Pushing from wiki to docs
       run: |
         cd main
