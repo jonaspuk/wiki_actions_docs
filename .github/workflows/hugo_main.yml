@@ -4,7 +4,7 @@ on:
   schedule:
     - cron:  '51 * * * 1-5'
 jobs:
-  build:
+  Convert .wiki docs to static pages using Hugo:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout Wiki
@@ -33,7 +33,7 @@ jobs:
     - name: Build a Hugo Docker Image
       run: echo "not actually building anything just yet"
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v1
+      uses: peaceiris/actions-hugo@v2
       with:
         hugo-version: '0.88.0'
         extended: true
