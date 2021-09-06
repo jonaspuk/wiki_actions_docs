@@ -17,8 +17,6 @@ jobs:
       with:
         repository: '${{ github.repository }}'
         path: 'main'
-    - name: Copy wiki files to docs
-      run: rsync -avz --exclude '.git' wiki/ main/docs
     - name: Print main repo contents
       run: ls -la main/docs && ls -la wiki
     - name: Define a Dockerfile
@@ -37,12 +35,21 @@ jobs:
       with:
         hugo-version: '0.88.0'
         extended: true
+    - name: Copy wiki files to Hugo content folder
+      run: |
+        rsync -avz --exclude '.git' wiki/ mydocs/content/
+        cd mydocs/content/
+        for md in $(ls *.md); do
+          ARTICLE_NAME=$(echo $md | sed 's/.md//')
+          DATE=$(date --iso-8601=seconds)
+          sed -i '1 s/^/---\ntitle: "'$ARTICLE_NAME'"\ndate: "'$DATE'"\ndraft: "false"\n---\n\n/' $md
+        done
     - name: Creating a site and pulling a theme
       run: |
         hugo new site mydocs &>/dev/null; cd mydocs
         git clone https://github.com/mbrt-yeah/uwe-uwe-hugo.git themes/uwe-uwe
         hugo -D -v --theme uwe-uwe -d ../main/docs/
-    - name: Creting static HTML files
+    - name: Creating static HTML files
       run: |
         ls -la main/docs
     - name: Pushing docs to repo
