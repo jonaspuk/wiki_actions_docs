@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>http://example.org/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>_Footer</title>
+      <link>http://example.org/_footer/</link>
+      <pubDate>Mon, 06 Sep 2021 14:59:56 +0000</pubDate>
+      
+      <guid>http://example.org/_footer/</guid>
+      <description>some footer </description>
+    </item>
+    
+    <item>
+      <title>Home</title>
+      <link>http://example.org/home/</link>
+      <pubDate>Mon, 06 Sep 2021 14:59:56 +0000</pubDate>
+      
+      <guid>http://example.org/home/</guid>
+      <description>This is the first page  This is some code    sdfsdf
+       link_to_wiki_page_2   </description>
+    </item>
+    
+    <item>
+      <title>md_test_1</title>
+      <link>http://example.org/md_test_1/</link>
+      <pubDate>Mon, 06 Sep 2021 14:59:56 +0000</pubDate>
+      
+      <guid>http://example.org/md_test_1/</guid>
+      <description>Headers There are two ways to define headers:
+The biggest possible header You can also use this markup (I prefer the first one as it&amp;rsquo;s more readable when looking directly at the source code)
+A sub heading This is the alternative format Then you can go smaller And smaller And even smaller No, you can&amp;rsquo;t go smaller than this The good thing is that many tools that convert Markdown in HTML or PDF are able to generate the index of your document, or links to the headers automatically (like Github does on the [source]( http://git.</description>
+    </item>
+    
+    <item>
+      <title>Page-2</title>
+      <link>http://example.org/page-2/</link>
+      <pubDate>Mon, 06 Sep 2021 14:59:56 +0000</pubDate>
+      
+      <guid>http://example.org/page-2/</guid>
+      <description>This is a page 2 </description>
+    </item>
+    
+    <item>
+      <title>Page-3</title>
+      <link>http://example.org/page-3/</link>
+      <pubDate>Mon, 06 Sep 2021 14:59:56 +0000</pubDate>
+      
+      <guid>http://example.org/page-3/</guid>
+      <description>Adding a new page to test github actions </description>
+    </item>
+    
+  </channel>
+</rss>
