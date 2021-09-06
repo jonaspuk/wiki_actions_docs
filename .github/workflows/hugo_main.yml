@@ -36,6 +36,7 @@ jobs:
       uses: peaceiris/actions-hugo@v1
       with:
         hugo-version: 'latest'
+        extended: true
     - name: Creating a site and pulling a theme
       run: |
         hugo new site mydocs; cd mydocs
