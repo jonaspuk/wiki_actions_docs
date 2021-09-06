@@ -1,10 +1,10 @@
-name: Hugo
+name: Convert .wiki docs to static pages using Hugo
 on:
   workflow_dispatch:
   schedule:
     - cron:  '51 * * * 1-5'
 jobs:
-  Convert .wiki docs to static pages using Hugo:
+  Build:
     runs-on: ubuntu-20.04
     steps:
     - name: Checkout Wiki
