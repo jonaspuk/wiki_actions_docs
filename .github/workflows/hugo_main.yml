@@ -41,9 +41,10 @@ jobs:
         hugo new site mydocs; cd mydocs
         git clone https://github.com/alex-shpak/hugo-book themes/book
         cp -R themes/book/exampleSite/content .
+        hugo -d main/docs --minify --theme book
     - name: Creting static HTML files
       run: |
-        pwd
+        ls -la main/docs
     - name: Pushing from wiki to docs
       run: |
         cd main
