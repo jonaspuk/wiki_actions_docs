@@ -17,8 +17,8 @@ jobs:
       with:
         repository: '${{ github.repository }}'
         path: 'main'
-    - name: Print main repo contents
-      run: ls -la main/docs && ls -la wiki
+#   - name: Print main repo contents
+#     run: ls -la main/docs && ls -la wiki
     - name: Define a Dockerfile
       run: |
         echo -e "# Container image that runs your code \n
