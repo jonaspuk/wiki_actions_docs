@@ -33,7 +33,7 @@ jobs:
     - name: Build a Hugo Docker Image
       run: echo "not actually building anything just yet"
     - name: Setup Hugo
-      uses: peaceiris/actions-hugo@v2
+      uses: peaceiris/actions-hugo@v1
       with:
         hugo-version: 'latest'
     - name: Creating a site and pulling a theme
@@ -41,7 +41,7 @@ jobs:
         hugo new site mydocs; cd mydocs
         git clone https://github.com/alex-shpak/hugo-book themes/book
         cp -R themes/book/exampleSite/content .
-        hugo -d main/docs --minify --theme book
+        hugo -d main/docs --minify --theme book # getting an error message about not being extended
     - name: Creting static HTML files
       run: |
         ls -la main/docs
