@@ -57,9 +57,9 @@ jobs:
         hugo -D -v --theme uwe-uwe -d ../main/docs/
     - name: Pushing docs to repo
       run: |
-        ls -la
+        cd main
         git config user.name github-actions
         git config user.email github-actions@github.com
-        git add ./main/docs
+        git add docs
         git commit -m "$(date)" || echo #this is to change the return code to 0
         git push
