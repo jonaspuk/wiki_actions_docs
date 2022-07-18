@@ -7,9 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Home</title>
+      <link>http://example.org/home/</link>
+      <pubDate>Mon, 18 Jul 2022 15:56:50 +0000</pubDate>
+      
+      <guid>http://example.org/home/</guid>
+      <description>This is the first page  This is some code    sdfsdf
+       link_to_wiki_page_2   </description>
+    </item>
+    
+    <item>
       <title>md_test_1</title>
       <link>http://example.org/md_test_1/</link>
-      <pubDate>Mon, 18 Jul 2022 14:52:08 +0000</pubDate>
+      <pubDate>Mon, 18 Jul 2022 15:56:50 +0000</pubDate>
       
       <guid>http://example.org/md_test_1/</guid>
       <description>Headers There are two ways to define headers:
@@ -18,37 +28,9 @@ A sub heading This is the alternative format Then you can go smaller And smaller
     </item>
     
     <item>
-      <title>Page-4</title>
-      <link>http://example.org/page-4/</link>
-      <pubDate>Mon, 18 Jul 2022 14:52:08 +0000</pubDate>
-      
-      <guid>http://example.org/page-4/</guid>
-      <description>This is for the page Four end of file  </description>
-    </item>
-    
-    <item>
-      <title>page-6</title>
-      <link>http://example.org/page-6/</link>
-      <pubDate>Mon, 18 Jul 2022 14:52:08 +0000</pubDate>
-      
-      <guid>http://example.org/page-6/</guid>
-      <description>new page 6 </description>
-    </item>
-    
-    <item>
-      <title>Home</title>
-      <link>http://example.org/home/</link>
-      <pubDate>Mon, 18 Jul 2022 14:52:07 +0000</pubDate>
-      
-      <guid>http://example.org/home/</guid>
-      <description>This is the first page  This is some code    sdfsdf
-       link_to_wiki_page_2   </description>
-    </item>
-    
-    <item>
       <title>Page-2</title>
       <link>http://example.org/page-2/</link>
-      <pubDate>Mon, 18 Jul 2022 14:52:07 +0000</pubDate>
+      <pubDate>Mon, 18 Jul 2022 15:56:50 +0000</pubDate>
       
       <guid>http://example.org/page-2/</guid>
       <description>This is a page 2 This is a table    Syntax Description     Header Title   Paragraph Text     </description>
@@ -57,11 +39,29 @@ A sub heading This is the alternative format Then you can go smaller And smaller
     <item>
       <title>Page-3</title>
       <link>http://example.org/page-3/</link>
-      <pubDate>Mon, 18 Jul 2022 14:52:07 +0000</pubDate>
+      <pubDate>Mon, 18 Jul 2022 15:56:50 +0000</pubDate>
       
       <guid>http://example.org/page-3/</guid>
       <description>Content of Page Three echo &amp;quot;this is some code&amp;quot;
 This is a fenced code block { &amp;#34;firstName&amp;#34;: &amp;#34;John&amp;#34;, &amp;#34;lastName&amp;#34;: &amp;#34;Smith&amp;#34;, &amp;#34;age&amp;#34;: 25 } </description>
+    </item>
+    
+    <item>
+      <title>Page-4</title>
+      <link>http://example.org/page-4/</link>
+      <pubDate>Mon, 18 Jul 2022 15:56:50 +0000</pubDate>
+      
+      <guid>http://example.org/page-4/</guid>
+      <description>This is for the page Four end of file  </description>
+    </item>
+    
+    <item>
+      <title>page-6</title>
+      <link>http://example.org/page-6/</link>
+      <pubDate>Mon, 18 Jul 2022 15:56:50 +0000</pubDate>
+      
+      <guid>http://example.org/page-6/</guid>
+      <description>new page 6 </description>
     </item>
     
   </channel>
